@@ -1,0 +1,29 @@
+@use '../../styles/colors.module.scss';
+.nav {
+  padding: 40px;
+  background-color: colors.$black;  
+  ul {    
+    padding:  10px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    font-size: 2.5rem;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .nav {
+    ul {
+      flex-direction: column;
+      .nav_btn {
+        margin-top: 30px;
+        width: 100%;
+      }
+    }
+  }
+  
+}

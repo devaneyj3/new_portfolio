@@ -1,0 +1,23 @@
+@use '../../styles/colors.module';
+
+.header {
+  background-color: colors.$black;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+.welcomeBox {
+  margin-left: 200px;
+  h1 {
+    color: white;
+
+  }
+}
+.header_btn {
+  margin-top: 30px;
+}
+  @media only screen and (max-width:900px) {
+      .header_btn {
+         margin-top: 30px;
+       }
+}
