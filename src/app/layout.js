@@ -2,6 +2,8 @@ import React from "react";
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export const metadata = {
 	title: "Jordan Devaney",
@@ -58,6 +60,7 @@ export const viewport = {
 	colorScheme: "light",
 };
 
+config.autoAddCss = false;
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" title="Portfolio Website">
