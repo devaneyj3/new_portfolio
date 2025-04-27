@@ -16,7 +16,7 @@ export default function About() {
 					className={styles.logo}
 					src={me}
 					height={400}
-					width={250}
+					width={270}
 					alt="Logo"
 				/>
 				<div className={styles.icons}>
