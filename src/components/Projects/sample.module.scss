@@ -1,0 +1,66 @@
+.carouselWrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+.carousel {
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none; /* hide scrollbar IE/Edge */
+	scrollbar-width: none; /* hide scrollbar Firefox */
+}
+.carousel::-webkit-scrollbar {
+	display: none; /* hide scrollbar Chrome/Safari */
+}
+
+.slide {
+	min-width: 100%;
+	flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+	scroll-snap-align: start;
+	position: relative;
+}
+
+.slideImage {
+	border-radius: 10px;
+	width: 75%;
+	height: 50vh;
+	object-fit: cover;
+}
+
+.navButton {
+	background: #111;
+	color: #fff;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+.navButton:hover {
+	background: #333;
+}
+.info {
+   height: fit-content;
+    position: relative;
+    top: 66%;
+    right: 35%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    p {
+      font-size: 1.5rem;
+      
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,25 @@
+.project {
+  height: 33vh;
+    flex: 0 0 100%;
+  min-width: 0;
+  .project_image {
+
+  }
+  .info {
+    width: 70%;
+    position: relative;
+    bottom: 40%;
+    left: 20%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    p {
+      font-size: 1.5rem;
+      
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+  }
+}
