@@ -3,5 +3,43 @@
   .intro {
     display: flex;
     justify-content: space-around;
+    align-items: end;
+    h1 {
+      font-size:5rem;
+    }
   }
+  p {
+    justify-self: center;
+    margin-top: 5%;
+    font-size: 2rem;
+  }
+  .project_nav {
+    margin-top: 60px;
+    ul {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 2rem;
+      li {
+        cursor: pointer;
+        &:hover {
+          color: crimson;
+        }
+        
+      }
+    }
+  }
+  .index {
+    margin-right: 30px;
+    color: rgb(63, 58, 58);
+  }
+}
+
+.active {
+  color: crimson;
+}
+.bar {
+  margin-top: 20px;
+  width: 200px;
 }
