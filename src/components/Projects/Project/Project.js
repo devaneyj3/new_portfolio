@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { CLIENT_PROJECTS } from "../../../../data/projects.data";
-import styles from "./project.module.scss";
+import styles from "./Project.module.scss";
 
 export default function CustomCarousel({ index }) {
 	const containerRef = useRef();
