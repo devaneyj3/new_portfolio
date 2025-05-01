@@ -33,17 +33,19 @@ const services = [
 export default function Services() {
 	return (
 		<div className={styles.services}>
-			<h1 className={styles.section_title}>My Services</h1>
-			<div className={styles.skills}>
-				{services.map((service) => {
-					return (
-						<div className={styles.skill} key={service.title}>
-							{service.icon}
-							<h1>{service.title}</h1>
-							<p>{service.description}</p>
-						</div>
-					);
-				})}
+			<div className={styles.services_container}>
+				<h1 className={styles.section_title}>My Services</h1>
+				<div className={styles.skills}>
+					{services.map((service) => {
+						return (
+							<div className={styles.skill} key={service.title}>
+								{service.icon}
+								<h1>{service.title}</h1>
+								<p>{service.description}</p>
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);
