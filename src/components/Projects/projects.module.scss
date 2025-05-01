@@ -1,5 +1,5 @@
 .projects_container {
-  margin: 2rem;
+  margin: 1rem;
   .intro {
     display: flex;
     justify-content: space-around;
@@ -42,4 +42,18 @@
 .bar {
   margin-top: 20px;
   width: 200px;
+}
+@media only screen and (max-width: 480px) {
+  .projects_container {
+
+    .project_nav {
+      margin-top: 20px;
+      ul {
+        display: block;
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
