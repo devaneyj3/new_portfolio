@@ -36,6 +36,8 @@
       position: relative;
       bottom: 92px;
       left: 110px;
+      border-radius: 12px;
+      overflow: hidden;
       animation-fill-mode: forwards;
     }
   }
@@ -60,7 +62,6 @@
     }
     }
   .about {
-    max-width: 500px;
     padding: 20px;
     h1 {
       font-size: 50px;
