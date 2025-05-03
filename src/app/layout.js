@@ -4,6 +4,7 @@ import Nav from "@/components/Nav/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
 	title: "Jordan Devaney",
@@ -23,7 +24,7 @@ export const metadata = {
 		siteName: "Jordan Devaney",
 		images: [
 			{
-				url: "/preview.webp", // Place your OG image in /public
+				url: "/me.png", // Place your OG image in /public
 				width: 1200,
 				height: 630,
 				alt: "Jordan Devaney Portfolio",
@@ -36,7 +37,7 @@ export const metadata = {
 		title: "Jordan Devaney",
 		description:
 			"Professional web developer based in Michigan specializing in React and e-commerce solutions.",
-		images: ["/preview.webp"],
+		images: ["/me.png"],
 	},
 	robots: {
 		index: true,
@@ -71,6 +72,7 @@ export default function RootLayout({ children }) {
 			<body>
 				<Nav />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
