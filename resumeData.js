@@ -5,13 +5,6 @@ export const resumeData = {
 	occupation: "Full Stack Web Developer",
 	description:
 		"I have a strong desire to be a productive member of a team environment that fosters learning, growth, and develop a great product for the user",
-	image: "Me.webp",
-	message: `
-    <p>
-      Let's work together to bring your vision to life! Whether you need a <em>custom website</em>, <em>modern web applications</em>, or <em>performance optimization</em>, I can help. 
-      <a href="#contactForm" aria-label="Contact me for web development services">Contact me today</a> to start your next project and take your <strong>online presence</strong> to the next level!
-    </p>
-  `,
 	bio: `
 		<p>I am a <strong>Full Stack Web Developer</strong> passionate about solving <strong>complex coding challenges</strong> and creating <strong>high-performing, visually appealing websites</strong> that drive results and benefit clients.</p>
 		<p>With a strong focus on <strong>responsive design, user experience (UX), and seamless functionality</strong>, I am committed to delivering web solutions that align with your business goals.</p>
@@ -29,18 +22,7 @@ export const resumeData = {
 		state: "Michigan",
 		zip: 48189,
 	},
-	social: [
-		{
-			name: "Linkedin",
-			url: "https://www.linkedin.com/in/jordandevaney/",
-			icon: faLinkedin,
-		},
-		{
-			name: "Github",
-			url: "https://github.com/devaneyj3",
-			icon: faGithub,
-		},
-	],
+
 	resume: {
 		skillmessage:
 			"I have developed superb in-demand programming skills through BloomTech (AKA Lambda School), Western Governors University, as well as from various Udemy and other Massive Open Online Courses (MOOCs)",

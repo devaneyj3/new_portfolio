@@ -1,0 +1,125 @@
+// Variables
+$primary-color: #2980b9; // Vibrant blue
+$secondary-color: #ecf0f1; // Light gray
+$accent-color: #e74c3c; // Bold red for accents
+$text-color: #333;
+$font-family: 'Roboto', sans-serif; // Modern sans-serif font
+
+.contact {
+  background-color: $secondary-color;
+  padding: 30px;
+  font-family: $font-family;
+  color: $text-color;
+
+  h2 {
+    color: $primary-color;
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+    text-align: center; 
+  }
+
+  .lead {
+    font-size: 20px;
+    margin-bottom: 2rem;
+    text-align: center; 
+    color: black;
+  }
+
+  .contactForm {
+    max-width: 600px; 
+    font-size: 20px;
+    margin: 0 auto; 
+
+    fieldset {
+      border: none; 
+      padding: 0; 
+
+      legend {
+        display: none; 
+      }
+
+      div {
+        margin-bottom: 1.5rem;
+
+        label {
+          display: block;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+
+          .required {
+            color: $accent-color;
+          }
+        }
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+
+          &:focus {
+            outline: none; 
+            border-color: $primary-color; 
+            box-shadow: 0 0 5px rgba($primary-color, 0.3); 
+          }
+        }
+
+        textarea {
+          resize: vertical; 
+        }
+      }
+
+      .submit {
+        background-color: $primary-color;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.75rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease; 
+
+        &:hover {
+          background-color: black; 
+        }
+      }
+
+      .imageLoader {
+        display: none; // Hide the loader initially
+        margin-left: 10px; 
+
+        img {
+          width: 30px; 
+          vertical-align: middle; 
+        }
+      }
+    }
+  }
+
+  .messageWarning,
+  .messageSuccess {
+    text-align: center; 
+    margin-top: 1rem; 
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px; 
+    border-radius: 5px; 
+  }
+
+  .messageWarning {
+    color: $accent-color; 
+    background-color: $accent-color; 
+    border: 1px solid $accent-color; 
+  }
+
+  .messageSuccess {
+    color: black; // Green color for success
+    background-color:#27ae60;
+    border: 1px solid #27ae60;
+
+    i {
+      margin-right: 5px; 
+    }
+  }
+}
