@@ -45,6 +45,11 @@ export default function Nav() {
 						</Link>
 					</li>
 					<li>
+						<Link href="./Blog" aria-label="Go to Blog section">
+							Blog
+						</Link>
+					</li>
+					<li>
 						<Link href="#contact" aria-label="Go to Contact section">
 							Contact
 						</Link>
