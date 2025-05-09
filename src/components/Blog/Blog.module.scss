@@ -1,6 +1,26 @@
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 70vh;
+  .post {
+    border: 1px solid black;
+    margin: 40px 0;
+  }
+}
+
+.tags_container {
+  display: flex;
+
+  .tag_container {
+     border: 1px solid black;
+     margin: 0 20px;
+     padding:  5px 10px;
+     width: fit-content;
+  }
+}
+
+.header {
+
 }

@@ -21,6 +21,12 @@ export default function Blog() {
 
 	return (
 		<div className={classes.container}>
+			<div className={classes.header}>
+				<h1>Latest News</h1>
+				<p>
+					Keep up with my latest discoveries and insights in the tech world.
+				</p>
+			</div>
 			<div className={classes.posts}>
 				{posts && posts.length > 0 ? (
 					posts.map((post, index) => {
@@ -28,8 +34,17 @@ export default function Blog() {
 						console.log("post", fields);
 						return (
 							<div key={index} className={classes.post}>
-								<h1>{fields.title}</h1>
+								<h2>{fields.title}</h2>
 								<p>{fields.publishedDate}</p>
+								<div className={classes.tags_container}>
+									{fields.tags.map((tag, index) => {
+										return (
+											<div className={classes.tag_container}>
+												<p className={classes.tag}>{tag}</p>
+											</div>
+										);
+									})}
+								</div>
 							</div>
 						);
 					})
