@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { CLIENT_PROJECTS } from "../../../../data/projects.data";
 import styles from "./Project.module.scss";
+import Link from "next/link";
 
 export default function CustomCarousel({ index }) {
 	const containerRef = useRef();
@@ -41,17 +42,19 @@ export default function CustomCarousel({ index }) {
 			<div className={styles.carousel} ref={containerRef}>
 				{CLIENT_PROJECTS.map((project, i) => (
 					<div className={styles.slide} key={i}>
-						<Image
-							src={project.image}
-							alt={`Slide ${i + 1}`}
-							width={500}
-							height={500}
-							className={styles.slideImage}
-						/>
-						<div className={styles.info}>
-							<h1>{project.title}</h1>
-							<p>{project.category}</p>
-						</div>
+						<Link href={project.url}>
+							<Image
+								src={project.image}
+								alt={`Slide ${i + 1}`}
+								width={500}
+								height={500}
+								className={styles.slideImage}
+							/>
+							<div className={styles.info}>
+								<h1>{project.title}</h1>
+								<p>{project.category}</p>
+							</div>
+						</Link>
 					</div>
 				))}
 			</div>
