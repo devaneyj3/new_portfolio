@@ -1,6 +1,5 @@
 import React from "react";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -70,7 +69,6 @@ export default function RootLayout({ children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body>
-				<Nav />
 				{children}
 				<Footer />
 			</body>

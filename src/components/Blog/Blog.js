@@ -2,12 +2,8 @@
 import React, { useEffect, useState } from "react";
 
 import classes from "./Blog.module.scss";
-import * as contentful from "contentful";
-
-const client = contentful.createClient({
-	space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE, // Replace with your space ID
-	accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_DELIVERY_TOKEN, // Replace with your access token
-});
+import Link from "next/link";
+import { client } from "@/utils/contentful";
 
 export default function Blog() {
 	const [posts, setPosts] = useState([]);
@@ -31,15 +27,18 @@ export default function Blog() {
 				{posts && posts.length > 0 ? (
 					posts.map((post, index) => {
 						const { fields } = post;
+						const readableDate = new Date(fields.publishedDate).toDateString();
 						console.log("post", fields);
 						return (
-							<div key={index} className={classes.post}>
-								<h2>{fields.title}</h2>
-								<p>{fields.publishedDate}</p>
+							<div className={classes.post} key={index}>
+								<Link href={`Blog/${fields.slug}`}>
+									<h2>{fields.title}</h2>
+									<p>{readableDate}</p>
+								</Link>
 								<div className={classes.tags_container}>
 									{fields.tags.map((tag, index) => {
 										return (
-											<div className={classes.tag_container}>
+											<div className={classes.tag_container} key={index}>
 												<p className={classes.tag}>{tag}</p>
 											</div>
 										);

@@ -1,12 +1,24 @@
+@use "../../styles/colors" ;
 .container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 70vh;
-  .post {
-    border: 1px solid black;
-    margin: 40px 0;
+  margin-top: 5%;
+  .posts {
+    width: 90vw;
+
+    .post {
+      background-color: white;
+      margin: 40px 0;
+      padding:  20px;
+      h2{
+        color: black;
+      }
+      p{
+        color: gray;
+      }
+    }
   }
 }
 
@@ -14,13 +26,15 @@
   display: flex;
 
   .tag_container {
-     border: 1px solid black;
-     margin: 0 20px;
-     padding:  5px 10px;
-     width: fit-content;
+    border: 1px solid black;
+    margin: 0 20px;
+    padding:  5px 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background: colors.$red;
+    .tag {
+      color: black;
+      font-weight: bold;
+    }
   }
-}
-
-.header {
-
 }
