@@ -2,8 +2,13 @@
 import React, { useEffect, useState } from "react";
 
 import classes from "./Blog.module.scss";
+import * as contentful from "contentful";
 import Link from "next/link";
-import { client } from "@/utils/contentful";
+
+const client = contentful.createClient({
+	space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE, // Replace with your space ID
+	accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_DELIVERY_TOKEN, // Replace with your access token
+});
 
 export default function Blog() {
 	const [posts, setPosts] = useState([]);
@@ -31,7 +36,7 @@ export default function Blog() {
 						console.log("post", fields);
 						return (
 							<div className={classes.post} key={index}>
-								<Link href={`Blog/${fields.slug}`}>
+								<Link href={`/Blog/${fields.slug}`}>
 									<h2>{fields.title}</h2>
 									<p>{readableDate}</p>
 								</Link>
