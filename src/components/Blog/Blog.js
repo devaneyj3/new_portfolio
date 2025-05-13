@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 
 import classes from "./Blog.module.scss";
 import * as contentful from "contentful";
-import Link from "next/link";
 
 const client = contentful.createClient({
 	space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE, // Replace with your space ID
@@ -35,11 +34,9 @@ export default function Blog() {
 						const readableDate = new Date(fields.publishedDate).toDateString();
 						console.log("post", fields);
 						return (
-							<div className={classes.post} key={index}>
-								<Link href={`/Blog/${fields.slug}`}>
-									<h2>{fields.title}</h2>
-									<p>{readableDate}</p>
-								</Link>
+							<div key={index} className={classes.post}>
+								<h2>{fields.title}</h2>
+								<p>{fields.publishedDate}</p>
 								<div className={classes.tags_container}>
 									{fields.tags.map((tag, index) => {
 										return (
