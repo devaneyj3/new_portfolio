@@ -36,7 +36,7 @@ export default function Blog() {
 						return (
 							<div key={index} className={classes.post}>
 								<h2>{fields.title}</h2>
-								<p>{fields.publishedDate}</p>
+								<p>{readableDate}</p>
 								<div className={classes.tags_container}>
 									{fields.tags.map((tag, index) => {
 										return (
