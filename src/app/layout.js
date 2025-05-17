@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Footer from "@/components/Footer/Footer";
+import { BlogProvider } from "@/context/BlogContext";
 
 export const metadata = {
 	title: "Jordan Devaney",
@@ -69,7 +70,7 @@ export default function RootLayout({ children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body>
-				{children}
+				<BlogProvider>{children}</BlogProvider>
 				<Footer />
 			</body>
 		</html>
