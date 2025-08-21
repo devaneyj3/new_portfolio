@@ -1,6 +1,6 @@
 import AGUSA from "../public/images/portfolio/agusa.webp";
 import EDENRICH from "../public/images/portfolio/edenrich.png";
-import MAXGOODNESS from "../public/images/portfolio/maxgoodness.png";
+import INVOICE from "../public/images/portfolio/invoice.png";
 import GOSHEN from "../public/images/portfolio/goshen.png";
 export const CLIENT_PROJECTS = [
 	{
@@ -16,10 +16,10 @@ export const CLIENT_PROJECTS = [
 		url: "https://edenrich.life",
 	},
 	{
-		title: "Max Goodness",
-		category: "Sales website created for Max-Well a subsidary of AG-USA",
-		image: MAXGOODNESS,
-		url: "https://max-well-yv93-devaneyj3s-projects.vercel.app/",
+		title: "Invoice Creation",
+		category: "Automate Creating Personal Invoices",
+		image: INVOICE,
+		url: "https://create-invoices-alpha.vercel.app/",
 	},
 	{
 		title: "Goshen Hill Rental",

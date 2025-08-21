@@ -15,6 +15,7 @@ export const useBlogContext = () => {
 
 export const BlogProvider = ({ children }) => {
 	const [articles, setArticles] = useState([]);
+	const [selectedArticle, setSelectedArticle] = useState({});
 	useEffect(() => {
 		const getData = async () => {
 			const data = await client.getEntries();
@@ -24,6 +25,9 @@ export const BlogProvider = ({ children }) => {
 	}, []);
 
 	return (
-		<BlogContext.Provider value={{ articles }}>{children}</BlogContext.Provider>
+		<BlogContext.Provider
+			value={{ articles, selectedArticle, setSelectedArticle }}>
+			{children}
+		</BlogContext.Provider>
 	);
 };

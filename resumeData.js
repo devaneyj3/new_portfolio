@@ -82,31 +82,5 @@ export const resumeData = {
 				url: "https://search-github-users54.netlify.app/",
 			},
 		],
-		client_projects: [
-			{
-				title: "AG-USA",
-				category: "Main website for AG-USA.",
-				image: "agusa.webp",
-				url: "https://agusa.life",
-			},
-			{
-				title: "EdenRich",
-				category: "Landing page for an AG-USA product to sell in stores.",
-				image: "edenrich.png",
-				url: "https://edenrich.life",
-			},
-			{
-				title: "Max Goodness",
-				category: "Sales website created for Max-Well a subsidary of AG-USA",
-				image: "maxgoodness.png",
-				url: "https://max-well-yv93-devaneyj3s-projects.vercel.app/",
-			},
-			{
-				title: "Goshen Hill Rental",
-				category: "Summer Rental Home Vacation Website.",
-				image: "goshen.png",
-				url: "https://phillipsjt71.wixsite.com/goshen-hill-rentals",
-			},
-		],
 	},
 };
