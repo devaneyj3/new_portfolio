@@ -101,20 +101,21 @@ const Contact = () => {
 			className={styles.contact}
 			aria-labelledby="contactFormHeading"
 			id="contact">
-			<h2 id="contactFormHeading">Looking for a Skilled Web Developer?</h2>
+			<h2 id="contactFormHeading" className={styles.section_title}>
+				Let's Build Together
+			</h2>
 			<div className={styles.lead}>
 				<p>
-					Let's work together to bring your vision to life! Whether you need a{" "}
-					<em>custom website</em>, <em>modern web applications</em>, or{" "}
-					<em>performance optimization</em>, I can help.
-					<a
-						href="#contactForm"
-						aria-label="Contact me for web development services">
-						{" "}
-						Contact me today
-					</a>{" "}
-					to start your next project and take your{" "}
-					<strong>online presence</strong> to the next level!
+					Ready to transform your digital presence? I've helped businesses like
+					yours achieve remarkable growth. Whether you need a{" "}
+					<strong>custom website</strong>,{" "}
+					<strong>modern web applications</strong>, or{" "}
+					<strong>performance optimization</strong>, let's discuss how I can
+					help you reach your goals.
+				</p>
+				<p className={styles.cta_text}>
+					Take the first step—get in touch today and let's turn your vision into
+					reality.
 				</p>
 			</div>
 

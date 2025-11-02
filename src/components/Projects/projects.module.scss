@@ -1,55 +1,108 @@
 .projects_container {
-  margin: 1rem;
+  padding: 100px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #1e293b 0%, #2563eb 50%, #06b6d4 100%);
+  }
+
   .intro {
-    display: flex;
-    justify-content: space-around;
-    align-items: end;
-    h1 {
-      font-size:5rem;
+    text-align: center;
+    margin-bottom: 60px;
+
+    .section_title {
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #1e293b 0%, #2563eb 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section_subtitle {
+      font-size: 20px;
+      color: #4b5563;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 300;
+      line-height: 1.6;
     }
   }
-  p {
-    justify-self: center;
-    margin-top: 5%;
-    font-size: 2rem;
-  }
+
   .project_nav {
-    margin-top: 60px;
+    margin-top: 50px;
     ul {
       display: flex;
       gap: 50px;
       justify-content: center;
       flex-wrap: wrap;
       font-size: 2rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
       li {
         cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease;
+        padding: 10px 15px;
+        border-radius: 8px;
+        
         &:hover {
-          color: crimson;
+          color: #2563eb;
+          background-color: rgba(37, 99, 235, 0.1);
         }
         
+        &:active {
+          transform: scale(0.95);
+        }
       }
     }
   }
   .index {
     margin-right: 30px;
-    color: rgb(63, 58, 58);
+    color: #6b7280;
   }
 }
 
 .active {
-  color: crimson;
+  color: #2563eb;
 }
 .bar {
   margin-top: 20px;
   width: 200px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .projects_container {
+    padding: 80px 20px;
+
+    .intro {
+      margin-bottom: 40px;
+
+      .section_title {
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+
+      .section_subtitle {
+        font-size: 18px;
+      }
+    }
 
     .project_nav {
-      margin-top: 20px;
+      margin-top: 40px;
       ul {
         display: block;
+        gap: 20px;
         li {
           width: 100%;
         }

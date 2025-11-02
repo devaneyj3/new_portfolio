@@ -1,28 +1,65 @@
 // Variables
-$primary-color: #2980b9; // Vibrant blue
-$secondary-color: #ecf0f1; // Light gray
-$accent-color: #e74c3c; // Bold red for accents
-$text-color: #333;
+$primary-color: #2563eb; // Professional blue
+$secondary-color: #f9fafb; // Light gray
+$accent-color: #06b6d4; // Teal accent
+$text-color: #1f2937;
 $font-family: 'Roboto', sans-serif; // Modern sans-serif font
 
 .contact {
-  background-color: $secondary-color;
-  padding: 30px;
+  background-color: white;
+  padding: 100px 30px;
   font-family: $font-family;
   color: $text-color;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
 
-  h2 {
-    color: $primary-color;
-    font-size: 40px;
-    margin-bottom: 1.5rem;
-    text-align: center; 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #1e293b 0%, #2563eb 50%, #06b6d4 100%);
+  }
+
+  .section_title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #1e293b 0%, #2563eb 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .lead {
     font-size: 20px;
-    margin-bottom: 2rem;
+    margin-bottom: 50px;
     text-align: center; 
-    color: black;
+    color: #1f2937;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+
+    p {
+      margin-bottom: 20px;
+
+      strong {
+        color: #2563eb;
+        font-weight: 600;
+      }
+    }
+
+    .cta_text {
+      font-size: 22px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 30px;
+    }
   }
 
   .contactForm {
@@ -47,7 +84,7 @@ $font-family: 'Roboto', sans-serif; // Modern sans-serif font
           margin-bottom: 0.5rem;
 
           .required {
-            color: $accent-color;
+            color: #dc2626;
           }
         }
 
@@ -60,8 +97,8 @@ $font-family: 'Roboto', sans-serif; // Modern sans-serif font
 
           &:focus {
             outline: none; 
-            border-color: $primary-color; 
-            box-shadow: 0 0 5px rgba($primary-color, 0.3); 
+            border-color: #2563eb; 
+            box-shadow: 0 0 5px rgba(37, 99, 235, 0.3); 
           }
         }
 
@@ -71,17 +108,25 @@ $font-family: 'Roboto', sans-serif; // Modern sans-serif font
       }
 
       .submit {
-        background-color: $primary-color;
+        background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
         color: white;
-        padding: 12px 20px;
+        padding: 15px 40px;
         border: none;
-        border-radius: 5px;
-        font-size: 1.75rem;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        font-weight: 600;
         cursor: pointer;
-        transition: background-color 0.3s ease; 
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 
         &:hover {
-          background-color: black; 
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+          background: linear-gradient(135deg, #1d4ed8 0%, #0891b2 100%);
+        }
+
+        &:active {
+          transform: translateY(0);
         }
       }
 
@@ -108,18 +153,36 @@ $font-family: 'Roboto', sans-serif; // Modern sans-serif font
   }
 
   .messageWarning {
-    color: $accent-color; 
-    background-color: $accent-color; 
-    border: 1px solid $accent-color; 
+    color: #dc2626; 
+    background-color: #fee2e2; 
+    border: 1px solid #dc2626; 
   }
 
   .messageSuccess {
-    color: black; // Green color for success
-    background-color:#27ae60;
-    border: 1px solid #27ae60;
+    color: #065f46; 
+    background-color: #d1fae5;
+    border: 1px solid #10b981;
 
     i {
       margin-right: 5px; 
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 80px 20px;
+
+    .section_title {
+      font-size: 42px;
+      margin-bottom: 25px;
+    }
+
+    .lead {
+      font-size: 18px;
+      margin-bottom: 40px;
+
+      .cta_text {
+        font-size: 20px;
+      }
     }
   }
 }

@@ -8,21 +8,21 @@ export default function Projects() {
 	const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
 	return (
-		<div className={styles.projects_container}>
+		<div className={styles.projects_container} id="portfolio">
 			<div className={styles.intro}>
-				<h1>Projects</h1>
+				<h1 className={styles.section_title}>See My Work</h1>
+				<p className={styles.section_subtitle}>
+					Real results for real businesses. Each project delivered measurable
+					impact and helped clients achieve their goals.
+				</p>
 			</div>
-			<p>
-				I have helped many clients grow there buisnesses and generate profit,
-				and I am ready to help you too. Just look at some of my past projects.
-			</p>
 			<div className={styles.project_nav}>
 				<ul>
 					{CLIENT_PROJECTS.map((project, index) => {
 						return (
 							<div key={index}>
 								<li
-									className={activeProjectIndex == index ? styles.active : null}
+									className={activeProjectIndex === index ? styles.active : ""}
 									onClick={() => setActiveProjectIndex(index)}>
 									<span className={styles.index}>{index + 1}</span>
 									<span>{project.title}</span>
@@ -33,7 +33,10 @@ export default function Projects() {
 					})}
 				</ul>
 			</div>
-			<CustomCarousel index={activeProjectIndex} />
+			<CustomCarousel
+				index={activeProjectIndex}
+				onIndexChange={setActiveProjectIndex}
+			/>
 		</div>
 	);
 }

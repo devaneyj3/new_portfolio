@@ -9,9 +9,6 @@ export default function About() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.pic_container}>
-				<div className={styles.name_container}>
-					<p>Hello, I am Jordan</p>
-				</div>
 				<Image
 					className={styles.logo}
 					src={me}
@@ -25,17 +22,28 @@ export default function About() {
 				</div>
 			</div>
 			<div className={styles.about}>
-				<h1>About Me</h1>
-				<p>
-					A full-stack web developer passionate about solving complex coding
-					challenges and creating high-performing, visually appealing websites
-					focused on responsive design, user experience, and seamless
-					functionality. Expertise in both front-end and back-end development,
-					committed to bringing your vision to life using modern technologies
-					and best practices. Offers services for custom website development,
-					performance optimization, and functionality enhancement. Contact for a
-					web solution to elevate your online presence.
+				<h1 className={styles.greeting}>Hi, I'm Jordan</h1>
+				<p className={styles.tagline}>
+					Full-stack developer crafting digital solutions that drive results
 				</p>
+				<div className={styles.story}>
+					<p>
+						Every business needs a digital presence that not only looks great
+						but
+						<strong> converts visitors into customers</strong>. That's where I
+						come in. I'm a full-stack web developer with a passion for solving
+						complex challenges and creating high-performing websites that make a
+						difference.
+					</p>
+					<p>
+						With expertise spanning from modern front-end frameworks to robust
+						back-end systems, I transform your vision into reality using
+						cutting-edge technologies and proven best practices. Whether you
+						need a complete digital transformation or optimization of your
+						existing site, I deliver solutions that elevate your online presence
+						and drive measurable growth.
+					</p>
+				</div>
 			</div>
 		</div>
 	);

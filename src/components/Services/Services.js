@@ -32,9 +32,13 @@ const services = [
 ];
 export default function Services() {
 	return (
-		<div className={styles.services}>
+		<div className={styles.services} id="services">
 			<div className={styles.services_container}>
-				<h1 className={styles.section_title}>My Services</h1>
+				<h1 className={styles.section_title}>What I Offer</h1>
+				<p className={styles.section_subtitle}>
+					Comprehensive solutions to transform your digital presence and drive
+					business growth
+				</p>
 				<div className={styles.skills}>
 					{services.map((service) => {
 						return (

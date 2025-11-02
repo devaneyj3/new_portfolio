@@ -5,8 +5,12 @@ import { EDUCATION_EXPERIENCE } from "../../../data/education_experience";
 
 export default function Education() {
 	return (
-		<div className={styles.education_container}>
-			<h1>Experience & Education</h1>
+		<div className={styles.education_container} id="resume">
+			<h1 className={styles.section_title}>Why I'm Qualified</h1>
+			<p className={styles.section_subtitle}>
+				Years of experience and continuous learning fuel my ability to deliver
+				exceptional results
+			</p>
 			<div className={styles.ed_ex_list}>
 				{EDUCATION_EXPERIENCE.map((item, index) => (
 					<EducationBox

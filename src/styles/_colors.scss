@@ -1,6 +1,28 @@
-$black: #000201;
-$cadet-gray: #a1a6b4ff;
-$light-blue: #94c5ccff;
-$columbia-blue: #b4d2e7ff;
-$seasalt: #f8f8f8ff;
-$red: linear-gradient(60deg,rgba(145, 71, 71, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+// Professional Color Palette
+$primary-dark: #0f172a; // Deep navy
+$primary: #1e293b; // Navy blue
+$secondary: #2563eb; // Professional blue
+$accent: #06b6d4; // Teal/cyan accent
+$accent-dark: #0891b2; // Darker teal
+
+// Neutrals
+$black: #0f172a;
+$gray-900: #1f2937;
+$gray-800: #374151;
+$gray-700: #4b5563;
+$gray-600: #6b7280;
+$gray-400: #9ca3af;
+$gray-200: #e5e7eb;
+$gray-100: #f3f4f6;
+$gray-50: #f9fafb;
+$white: #ffffff;
+
+// Legacy support (for existing components)
+$cadet-gray: #6b7280;
+$light-blue: #06b6d4;
+$columbia-blue: #3b82f6;
+$seasalt: #f9fafb;
+
+// Professional gradient (blue to teal)
+$primary-gradient: linear-gradient(135deg, #1e293b 0%, #2563eb 50%, #06b6d4 100%);
+$accent-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
