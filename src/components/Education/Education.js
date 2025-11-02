@@ -5,7 +5,7 @@ import { EDUCATION_EXPERIENCE } from "../../../data/education_experience";
 
 export default function Education() {
 	return (
-		<div className={styles.education_container} id="resume">
+		<div className={styles.education_container} id="education">
 			<h1 className={styles.section_title}>Why I'm Qualified</h1>
 			<p className={styles.section_subtitle}>
 				Years of experience and continuous learning fuel my ability to deliver

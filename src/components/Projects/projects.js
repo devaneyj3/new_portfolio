@@ -8,7 +8,7 @@ export default function Projects() {
 	const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
 	return (
-		<div className={styles.projects_container} id="portfolio">
+		<div className={styles.projects_container} id="projects">
 			<div className={styles.intro}>
 				<h1 className={styles.section_title}>See My Work</h1>
 				<p className={styles.section_subtitle}>

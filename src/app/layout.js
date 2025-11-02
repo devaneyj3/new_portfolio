@@ -5,7 +5,6 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Footer from "@/components/Footer/Footer";
 import { BlogProvider } from "@/context/BlogContext";
-import Nav from "@/components/Nav/Nav";
 
 export const metadata = {
 	title: "Jordan Devaney",
@@ -71,7 +70,6 @@ export default function RootLayout({ children }) {
 				<link rel="icon" href="/favicon.ico" />
 			</head>
 			<body>
-				<Nav />
 				<BlogProvider>{children}</BlogProvider>
 				<Footer />
 			</body>

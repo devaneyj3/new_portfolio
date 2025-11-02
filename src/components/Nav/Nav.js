@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import styles from "./Nav.module.scss";
 import Link from "next/link";
 
-export default function Nav() {
+export default function Nav({ navItems }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -19,41 +19,13 @@ export default function Nav() {
 				</div>
 
 				<ul className={`${styles.nav_links} ${isOpen ? styles.active : ""}`}>
-					<li className={styles.current}>
-						<Link href="#home" aria-label="Go to Home section">
-							Home
-						</Link>
-					</li>
-					<li>
-						<Link href="#about" aria-label="Go to About section">
-							About
-						</Link>
-					</li>
-					<li>
-						<Link href="#services" aria-label="Go to Services section">
-							Services
-						</Link>
-					</li>
-					<li>
-						<Link href="#resume" aria-label="Go to Resume section">
-							Resume
-						</Link>
-					</li>
-					<li>
-						<Link href="#portfolio" aria-label="Go to Works section">
-							Works
-						</Link>
-					</li>
-					<li>
-						<Link href="/blog" aria-label="Go to Blog section">
-							Blog
-						</Link>
-					</li>
-					<li>
-						<Link href="#contact" aria-label="Go to Contact section">
-							Contact
-						</Link>
-					</li>
+					{navItems.map((item) => (
+						<li key={item.label}>
+							<Link href={item.href} aria-label={`Go to ${item.label} section`}>
+								{item.label}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</div>
 		</nav>
