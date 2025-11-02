@@ -55,8 +55,13 @@
 
 /* Responsive rules */
 @media (max-width: 768px) {
+	.nav {
+		padding-bottom: 40px;
+	}
+
 	.hamburger {
 		display: block;
+		color: white;
     font-size: 20px;
     top: 10px;
     position: absolute;
