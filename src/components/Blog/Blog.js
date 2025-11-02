@@ -46,7 +46,7 @@ export default function Blog() {
 
 						return (
 							<article key={index} className={classes.post}>
-								<Link href={`Blog/${fields.slug}`} className={classes.postLink}>
+								<Link href={`blog/${fields.slug}`} className={classes.postLink}>
 									<div className={classes.postHeader}>
 										<h2 className={classes.postTitle}>{fields.title}</h2>
 										<div className={classes.postMeta}>

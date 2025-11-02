@@ -48,7 +48,7 @@
   .headerDecoration {
     width: 80px;
     height: 4px;
-    background: colors.$red;
+    background: colors.$accent;
     margin: 0 auto;
     border-radius: 2px;
   }
@@ -162,7 +162,7 @@
       flex-wrap: wrap;
       
       .tag_container {
-        background: colors.$red;
+        background: colors.$accent-dark;
         border-radius: 20px;
         padding: 0.6rem 1.2rem;
         border: none;
